@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+body .second-container{
+    width: 100%;
+    height: 92.5vh;
+    /* background-color: salmon; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* border-bottom: 2px solid black; */
+}
+
+body .second-container .main-content{
+    width: 60%;
+    height: 250px;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 240px;
+}
+
+body .second-container .main-content .upper-line{
+    width: 100%;
+    height: 50%;
+    /* background-color: maroon; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 55.5px;
+}
+
+body .second-container .main-content .upper-line p{
+    text-align: center;
+    font-family: 'Lexend',sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: #ef4f5f;
+}
+
+body .second-container .main-content .lower-line{
+    width: 100%;
+    height: 50%;
+    /* background-color: magenta; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 28px;
+}
+
+body .second-container .main-content .lower-line p{
+    text-align: center;
+    font-family: 'Lexend';
+    font-size: 20px;
+    font-weight: 300;
+    color: #596378;
+}
+
+body .second-container .leaf-section{
+    width: 48px;
+    position: absolute;
+    top: 64px;
+    left: 432px;
+}
+
+body .second-container .leaf-section img{
+    width: 100%;
+}
+
+body .second-container .momo-section{
+    width: 240px;
+    height: 212px;
+    position: absolute;
+    top: -90px;
+    right: 5px;
+    animation: moveImage 1s ease-in-out forwards;
+}
+
+@keyframes moveImage{
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-150px,100px);
+    }
+}
+
+body .second-container .momo-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+body .second-container .burger-section{
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    top: 20px;
+    animation: moveImage2 1s ease-in-out forwards;
+    left: 10px;
+    /* top: 256px;
+    left: 216px; */
+}
+
+@keyframes moveImage2{
+    from{
+        transform: translate(0);
+    }to{
+        transform: translate(225px,240px);
+    }
+}
+
+body .second-container .burger-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+body .second-container .tomato-1{
+    width: 48px;
+    position: absolute;
+    right: 115.2px;
+    bottom: 352px;
+    rotate: 45deg;
+}
+
+body .second-container .tomato-1 img{
+    width: 100%;
+}
+
+
+body .second-container .tomato-2{
+    width: 48px;
+    position: absolute;
+    bottom: 12.8px;
+    left: 144px;
+}
+
+body .second-container .tomato-2 img{
+    width: 100%;
+}
+
+body .second-container .pizza-section{
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    right: 144px;
+    bottom: 40px;
+}
+
+body .second-container .pizza-section img{
+    width: 100%;
+    height: 100%;
+}

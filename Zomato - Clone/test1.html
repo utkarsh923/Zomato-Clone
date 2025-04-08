@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Triggered In-View Effect</title>
+    <style>
+        body {
+            height: 2000px;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .in-view-element {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            margin: 1000px auto;
+        }
+
+        /* Keyframe animation for the in-view effect */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .in-view-element.visible {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        /* Spacer to help scroll */
+        .spacer {
+            height: 1500px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="spacer"></div>
+
+    <!-- The element that will animate -->
+    <div class="in-view-element"></div>
+
+    <div class="spacer"></div>
+
+    <script>
+        // Detect when the element is in view and add the "visible" class to trigger the animation
+        window.addEventListener('scroll', () => {
+            const element = document.querySelector('.in-view-element');
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                element.classList.add('visible');
+            }
+        });
+    </script>
+
+</body>
+</html>
